@@ -46,16 +46,29 @@ class Characters(Base):
     __tablename__ = 'characters'
 
     id = Column(Integer, primary_key=True)
+    name = Column(String(80))
+    gender = Column(String(6))
+    eye_color = Column(String(32))
+    birth_year = Column(String(20))#string to accomodate all characters
 
 class Planets(Base):
     __tablename__ = 'planets'
 
     id = Column(Integer, primary_key=True)
+    name = Column(String(80))
+    population = Column(Integer)
+    terrain = Column(String(250))
+
 
 class Vehicles(Base):
     __tablename__ = 'vehicles'
 
     id = Column(Integer, primary_key=True)
+    name = Column(String(250))
+    max_atmosphering_speed = Column(Integer)
+    passengers = Column(Integer)
+    crew = Column(Integer)
+
 
 
 
