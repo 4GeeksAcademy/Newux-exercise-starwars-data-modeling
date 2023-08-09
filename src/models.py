@@ -19,7 +19,7 @@ class User(Base):
     first_name = Column(String(250), nullable=False)
     last_name = Column(String(250), nullable=False)
     email = Column(String(120), nullable=False)
-    user_favorites = Column(Integer, ForeignKey("favorites.id"))#stakes relationship between user and it's favorites
+    # user_favorites = Column(Integer, ForeignKey("favorites.id"))#stakes relationship between user and it's favorites
 
 
 class Post(Base):
@@ -50,6 +50,7 @@ class Characters(Base):
     gender = Column(String(6))
     eye_color = Column(String(32))
     birth_year = Column(String(20))#string to accomodate all characters
+    picture_url = Column(String(256))
 
 class Planets(Base):
     __tablename__ = 'planets'
